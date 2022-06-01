@@ -22,7 +22,7 @@ export async function getStaticPaths() {
         console.log(response.data);
         const games = response.data.results;
 
-        const paths = games.map((game) => ({
+        paths = games.map((game) => ({
             params: { slug: game.slug},
         }));
 

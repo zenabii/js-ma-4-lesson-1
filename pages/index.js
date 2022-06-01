@@ -11,7 +11,11 @@ export default function Index(props) {
     <Head title="Next Intro"/>
 
     {props.games.map((game) => {
-      return <h3 key={game.slug} href={`game/${game.slug}`}>{game.name}</h3>;
+      return (
+        <a key={game.slug} href={`game/${game.slug}`}>
+         {game.name}
+        </a>
+       );
     })}
   </Layout>
  );
